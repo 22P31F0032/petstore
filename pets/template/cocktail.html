@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.details-container {
+  flex: 2;
+}
+
+.details-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.details-container p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+    </style>
+  <div class="container">
+    <div class="image-container">
+      <img src="../../static/images/img29.jpeg" alt="Pet Image">
+    </div>
+    <div class="details-container">
+      <h2>Pet Name: PARROT</h2>
+      <p>Breed:Cocktail </p>
+      <p>Age: 2 years</p>
+      <p>Color: Grey</p>
+      <P>PRICE: 22,000</P>
+      
+      <button type="submit"><a href="http://127.0.0.1:8000/orders/">BOOK NOW</button></a>
+      <!-- Add more details as needed -->
+    </div>
+  </div>
+</body>
+</html>

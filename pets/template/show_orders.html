@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet_orders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Customer pet orders data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Dog Name</th>
+                <th>Color</th>
+                <th>Customer Name</th>
+                <th>Customer E-mail</th>
+                <th>Customer phone</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for pets in data %}
+                <tr>
+                    <td>{{ pets.Breed_name }}</td>
+                    <td>{{ pets.color }}</td>
+                    <td>{{ pets.cus_name }}</td>
+                    <td>{{ pets.email }}</td>
+                    <td>{{ pets.phone }}</td>
+
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

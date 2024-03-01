@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>order_page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('/static/images/img.12.jpeg');
+      background-size: cover;
+    }
+    
+    .login-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 90px;
+      border-radius: 70px;
+      text-align: center;
+    }
+    
+    .login-form input,
+    .login-form button {
+      display: block;
+      width: 100%;
+      padding: 30px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .login-form button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .login-form button:hover {
+      background-color: #45a049;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form" method="POST" >
+      {% csrf_token %}
+
+      <h2>Place order</h2>
+      <input type="text" name="Breed_name" placeholder="Breed_name" required>
+      <input type="text" name="color" placeholder="Pet_color" required>
+      <input type="text" name="cus_name" placeholder="customer_name" required>
+      <input type="email" name="email" placeholder="email" required>
+      <input type="phone" name="phone" placeholder="phone" required>
+      <p><h2>confirm by clicking here</h2></p>
+      <button type="submit" class="btn btn-primary">confirm order</button>
+      <p><h2>check your order status below</h2></p>
+
+      <button type="submit"><a href="http://127.0.0.1:8000/show_orders/">status</a></button>
+
+    </form>
+  </div>
+</body>
+</html>
